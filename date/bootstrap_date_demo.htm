@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>
+        Tutorials point Bootstrap Examples
+    </title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="http://www.tutorialspoint.com/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="one-page-wonder.css" rel="stylesheet">
+
+    <style>
+        body {
+            padding: 70px 0px;
+        }
+        
+        .fa.pull-right {
+            margin-left: 0.1em;
+        }
+        
+        .date-picker,
+        .date-container {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            color: rgb(75, 77, 78);
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        .date-container {
+            padding: 0px 40px;
+        }
+        
+        .date-picker h2,
+        .date-picker h4 {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 200;
+        }
+        
+        .date-container .date {
+            text-align: center;
+        }
+        
+        .date-picker span.fa {
+            position: absolute;
+            font-size: 4em;
+            font-weight: 100;
+            padding: 8px 0px 7px;
+            cursor: pointer;
+            top: 0px;
+        }
+        
+        .date-picker span.fa[data-type="subtract"] {
+            left: 0px;
+        }
+        
+        .date-picker span.fa[data-type="add"] {
+            right: 0px;
+        }
+        
+        .date-picker span[data-toggle="calendar"] {
+            display: block;
+            position: absolute;
+            top: -7px;
+            right: 45px;
+            font-size: 1em !important;
+            cursor: pointer;
+        }
+        
+        .date-picker .input-datepicker {
+            display: none;
+            position: absolute;
+            top: 50%;
+            margin-top: -17px;
+            width: 100%;
+        }
+        
+        .date-picker .input-datepicker.show-input {
+            display: table;
+        }
+        
+        @media (min-width: 768px) and (max-width: 1010px) {
+            .date-picker h2 {
+                font-size: 1.5em;
+                font-weight: 400;
+            }
+            .date-picker h4 {
+                font-size: 1.1em;
+            }
+            .date-picker span.fa {
+                font-size: 3em;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">
+              Toggle navigation
+            </span>
+                    <span class="icon-bar">
+            </span>
+                    <span class="icon-bar">
+            </span>
+                    <span class="icon-bar">
+            </span>
+                </button>
+                <h1 class="logo">
+            <a title="tutorialspoint">
+              <img alt="tutorialspoint" src="http://www.tutorialspoint.com/green/images/logo.png" style="height: auto; width: auto; display: inline-block; top: 0px;">
+            </a>
+          </h1>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Full Width Image Header -->
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <h1 class="thick-heading">
+        ||Simple Date Picker Example||
+      </h1>
+
+        <!-- First Featurette -->
+        <div class="featurette" id="about">
+            <!------------------------code---------------start---------------->
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>By Day</h2>
+                        <hr/>
+                        <div class="date-picker" data-date="2014/09/02" data-keyboard="true">
+                            <div class="date-container pull-left">
+                                <h4 class="weekday">Monday</h4>
+                                <h2 class="date">Februray 4th</h2>
+                                <h4 class="year pull-right">2014</h4>
+                            </div>
+                            <span data-toggle="datepicker" data-type="subtract" class="fa fa-angle-left"></span>
+                            <span data-toggle="datepicker" data-type="add" class="fa fa-angle-right"></span>
+                            <div class="input-group input-datepicker">
+                                <input type="text" class="form-control" data-format="YYYY/MM/DD" placeholder="YYYY/MM/DD">
+                                <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                            </div>
+                            <span data-toggle="calendar" class="fa fa-calendar"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>By Week</h2>
+                        <hr/>
+                        <div class="date-picker">
+                            <div class="date-container pull-left">
+                                <h4 class="weekday">Monday</h4>
+                                <h2 class="date">Februray 4th</h2>
+                                <h4 class="year pull-right">2014</h4>
+                            </div>
+                            <span data-toggle="datepicker" data-type="subtract" data-amt="7" class="fa fa-angle-left pull-left"></span>
+                            <span data-toggle="datepicker" data-amt="7" class="fa fa-angle-right pull-right"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Start Date</h2>
+                        <hr/>
+                        <div class="date-picker" data-date="2014/10/31">
+                            <div class="date-container pull-left">
+                                <h4 class="weekday">Monday</h4>
+                                <h2 class="date">Februray 4th</h2>
+                                <h4 class="year pull-right">2014</h4>
+                            </div>
+                            <span data-toggle="datepicker" data-type="subtract" data-amt="1" class="fa fa-angle-left pull-left"></span>
+                            <span data-toggle="datepicker" data-amt="1" class="fa fa-angle-right pull-right"></span>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-4">
+                        <h2>By Month</h2>
+                        <hr/>
+                        <div class="date-picker" data-type="months">
+                            <div class="date-container pull-left">
+                                <h4 class="weekday">Monday</h4>
+                                <h2 class="date">Februray 4th</h2>
+                                <h4 class="year pull-right">2014</h4>
+                            </div>
+                            <span data-toggle="datepicker" data-type="subtract" class="fa fa-angle-left pull-left"></span>
+                            <span data-toggle="datepicker" class="fa fa-angle-right pull-right"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>By Year</h2>
+                        <hr/>
+                        <div class="date-picker" data-type="year" data-date="2014/12/25">
+                            <div class="date-container pull-left">
+                                <h4 class="weekday">Monday</h4>
+                                <h2 class="date">Februray 4th</h2>
+                                <h4 class="year pull-right">2014</h4>
+                            </div>
+                            <span data-toggle="datepicker" data-type="subtract" class="fa fa-angle-left pull-left"></span>
+                            <span data-toggle="datepicker" class="fa fa-angle-right pull-right"></span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <h2>Formatting</h2>
+                        <hr/>
+                        <div class="date-picker" data-date="2014/10/31">
+                            <div class="date-container pull-left">
+                                <h4 class="weekday" data-format="ddd">Monday</h4>
+                                <h2 class="date" data-format="MMM Do">Februray 4th</h2>
+                                <h4 class="year pull-right" data-format="YY">2014</h4>
+                            </div>
+                            <span data-toggle="datepicker" data-type="subtract" data-amt="1" class="fa fa-angle-left pull-left"></span>
+                            <span data-toggle="datepicker" data-amt="1" class="fa fa-angle-right pull-right"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <!----Code------end----------------------------------->
+        </div>
+        <!-- /.container -->
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-1">
+                        <a href="index.html" class="logo">
+
+                            <img alt="Tutorials Point" class="img-responsive" src="http://www.tutorialspoint.com//scripts/img/logo-footer.png">
+
+                        </a>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-12">
+                        <p>
+                            © Copyright 2015. All Rights Reserved.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- jQuery -->
+        <script src="http://www.tutorialspoint.com/bootstrap/scripts/jquery.min.js">
+        </script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+        <script>
+            $(document).ready(function () {
+
+                $(window).on('focus', function (event) {
+                    $('.show-focus-status > .alert-danger').addClass('hidden');
+                    $('.show-focus-status > .alert-success').removeClass('hidden');
+                }).on('blur', function (event) {
+                    $('.show-focus-status > .alert-success').addClass('hidden');
+                    $('.show-focus-status > .alert-danger').removeClass('hidden');
+                });
+
+                $('.date-picker').each(function () {
+                    var $datepicker = $(this),
+                        cur_date = ($datepicker.data('date') ? moment($datepicker.data('date'), "YYYY/MM/DD") : moment()),
+                        format = {
+                            "weekday": ($datepicker.find('.weekday').data('format') ? $datepicker.find('.weekday').data('format') : "dddd"),
+                            "date": ($datepicker.find('.date').data('format') ? $datepicker.find('.date').data('format') : "MMMM Do"),
+                            "year": ($datepicker.find('.year').data('year') ? $datepicker.find('.weekday').data('format') : "YYYY")
+                        };
+
+                    function updateDisplay(cur_date) {
+                        $datepicker.find('.date-container > .weekday').text(cur_date.format(format.weekday));
+                        $datepicker.find('.date-container > .date').text(cur_date.format(format.date));
+                        $datepicker.find('.date-container > .year').text(cur_date.format(format.year));
+                        $datepicker.data('date', cur_date.format('YYYY/MM/DD'));
+                        $datepicker.find('.input-datepicker').removeClass('show-input');
+                    }
+
+                    updateDisplay(cur_date);
+
+                    $datepicker.on('click', '[data-toggle="calendar"]', function (event) {
+                        event.preventDefault();
+                        $datepicker.find('.input-datepicker').toggleClass('show-input');
+                    });
+
+                    $datepicker.on('click', '.input-datepicker > .input-group-btn > button', function (event) {
+                        event.preventDefault();
+                        var $input = $(this).closest('.input-datepicker').find('input'),
+                            date_format = ($input.data('format') ? $input.data('format') : "YYYY/MM/DD");
+                        if (moment($input.val(), date_format).isValid()) {
+                            updateDisplay(moment($input.val(), date_format));
+                        } else {
+                            alert('Invalid Date');
+                        }
+                    });
+
+                    $datepicker.on('click', '[data-toggle="datepicker"]', function (event) {
+                        event.preventDefault();
+
+                        var cur_date = moment($(this).closest('.date-picker').data('date'), "YYYY/MM/DD"),
+                            date_type = ($datepicker.data('type') ? $datepicker.data('type') : "days"),
+                            type = ($(this).data('type') ? $(this).data('type') : "add"),
+                            amt = ($(this).data('amt') ? $(this).data('amt') : 1);
+
+                        if (type == "add") {
+                            cur_date = cur_date.add(date_type, amt);
+                        } else if (type == "subtract") {
+                            cur_date = cur_date.subtract(date_type, amt);
+                        }
+
+                        updateDisplay(cur_date);
+                    });
+
+                    if ($datepicker.data('keyboard') == true) {
+                        $(window).on('keydown', function (event) {
+                            if (event.which == 37) {
+                                $datepicker.find('span:eq(0)').trigger('click');
+                            } else if (event.which == 39) {
+                                $datepicker.find('span:eq(1)').trigger('click');
+                            }
+                        });
+                    }
+
+                });
+            });
+        </script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="http://www.tutorialspoint.com/bootstrap/js/bootstrap.min.js">
+        </script>
+    </div>
+</body>
+
+</html>

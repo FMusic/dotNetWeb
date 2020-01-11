@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Menu.master.cs" Inherits="Admin.Menu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <ul class="nav navbar-nav">
+        <li><a href="#">Admin</a></li>
+        <li><a href="Users.aspx">Users</a></li>
+        <li><a href="Meals.aspx">Meals</a></li>
+        <li><a href="Groceries.aspx">Groceries</a></li>
+        <li><a href="MeasuringUnits.aspx">MeasuringUnits</a></li>
+    </ul>
+
+
+    <form runat="server">
+        <asp:ContentPlaceHolder ID="content1" runat="server" />
+    </form>
+</body>
+</html>

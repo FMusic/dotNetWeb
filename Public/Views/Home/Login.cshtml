@@ -1,0 +1,156 @@
+﻿@model Public.Models.LoginViewModel
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_StartingPageLayout.cshtml";
+}
+
+
+@*<form class="form-container">
+        <h1>login</h1>
+        <div class="tbox">
+            <input type="text" placeholder="Username">
+        </div>
+        <div class="tbox">
+            <input type="password" placeholder="Password">
+        </div>
+        <div class="tbox">
+            <input type="submit" value="Login" class="btn">
+        </div>
+    </form>*@
+<h2 id="title"><span id="loginBtn">Login</span> <span>/</span><span id="regBtn"> Register New User</span></h2>
+<div class="form-container" id="loginForm">
+    <h2>Login</h2>
+    @using (Html.BeginForm("LoginUser", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.User.Username, new { @class = "form-container-label" })
+            <div class="tbox">
+                @Html.TextBoxFor(m => m.User.Username, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.User.Password, new { @class = "form-container-label" })
+            <div class="tbox">
+                @Html.PasswordFor(m => m.User.Password, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="tbox">
+            <button type="submit" class="btn">SUBMIT</button>
+        </div>
+    }
+</div>
+<div class="form-container" id="registerForm">
+    <h2>REGISTRATION</h2>
+    @using (Html.BeginForm("RegisterUser", "Home", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(x => x.User.Name, new { @class = "form-container-label" })
+            <div class="tbox">
+                @Html.TextBoxFor(x => x.User.Name, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.User.Surname, new { @class = "form-container-label" })
+            <div class="tbox">
+                @Html.TextBoxFor(x => x.User.Surname, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.User.Weight, new { @class = "form-container-label" })
+            <div class="tbox">
+                @Html.TextBoxFor(x => x.User.Weight, new { @class = "form-control" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(x => x.User.Height, new { @class = "form-container-label" })
+            <div class="tbox">
+                @Html.TextBoxFor(x => x.User.Height, new { @class = "form-control" })
+            </div>
+        </div>
+        @*KALENDAR - todo , Folder u JQueryLibs*@
+        <div class="form-group">
+            @Html.LabelFor(x => x.User.DateOfBirth, new { @class = "form-container-label" })
+            <div class="tbox">
+                @Html.TextBoxFor(x => x.User.DateOfBirth, new { @class = "form-control", @id = "datepicker-12" })
+            </div>
+        </div>
+        <script>
+            $(function () {
+                $("#datepicker-12").datepicker();
+                $("#datepicker-12").datepicker("setDate", "10w+1");
+            });
+        </script>
+        @Html.Label("Physical activity", new { @class = "form-container-label" })
+        <br />
+        foreach (var activityMode in Enum.GetNames(Model.User.ActivityEnum.GetType()))
+        {
+            <div class="radio-inline">
+                @Html.RadioButtonFor(m => m.User.PhysicalActivity, activityMode)
+                @Html.Label(activityMode.ToString())
+            </div>
+        }
+        <br />
+        @Html.Label("Sex", new { @class = "form-container-label" })
+        <br />
+        foreach (var sex in Enum.GetNames(Model.User.SexEnum.GetType()))
+        {
+            <div class="radio-inline">
+                @Html.RadioButtonFor(m => m.User.Sex, sex)
+                @Html.Label(sex.ToString())
+            </div>
+        }
+        @*Diabetes Type select list *@
+        <div class="form-group">
+                @Html.LabelFor(m => m.User.DiabetesEnum)
+                @Html.EnumDropDownListFor(model => model.User.DiabetesEnum, // Model field that will be used to store user selection
+                                          "- Diabetes Type -", // Text for the first 'default' option
+                                          new { @class = "form-control" })  @* A class name to assign to "select" tag *@
+                                    </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.User.Email, new { @class = "form-container-label" })
+                                    <div class="tbox">
+                                        @Html.TextBoxFor(x => x.User.Email, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.User.Username, new { @class = "form-container-label" })
+                                    <div class="tbox">
+                                        @Html.TextBoxFor(x => x.User.Username, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    @Html.LabelFor(x => x.User.Password, new { @class = "form-container-label" })
+                                    <div class="tbox">
+                                        @Html.PasswordFor(x => x.User.Password, new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="tbox">
+                                    <button type="submit" class="btn btn-primary">SUBMIT</button>
+                                </div>
+                            }
+</div>
+<script>
+    $(document).ready(function () {
+
+        $("#registerForm").hide();
+        $("#loginBtn").click(function () {
+            changeView("login");
+        });
+        $("#regBtn").click(function () {
+            changeView("reg")
+        });
+    });
+
+
+    function changeView(option) {
+        if (option === "reg") {
+            $("#registerForm").show();
+            $("#loginForm").hide();
+
+        }
+        else {
+            $("#registerForm").hide();
+            $("#loginForm").show();
+        }
+    }
+</script>

@@ -1,0 +1,613 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PraRwaProjektModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="GetGroceries" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetGroceries2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetGroceriesAndUnits" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetMealFromName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="GetMealFromName2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="GetMeals" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetMeasuringUnits" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetNutritionsForADay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+        </Function>
+        <Function Name="GetNutritionsForADay2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+          <Parameter Name="mealsNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetNutritionsForADay3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+          <Parameter Name="mealsNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetNutritionsForADay4" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+          <Parameter Name="mealsNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetNutritionsForADay5" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+          <Parameter Name="mealsNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetNutritionsForADay6" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+          <Parameter Name="mealsNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetNutritionsForADay7" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+          <Parameter Name="mealsNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetNutritionsForADay8" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="dateWhen" Type="date" Mode="In" />
+          <Parameter Name="mealsNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetUserMealsForADay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="date" Type="date" Mode="In" />
+        </Function>
+        <Function Name="GetUsers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetUsers2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="LoginUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="NewCombination" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="datef" Type="date" Mode="In" />
+          <Parameter Name="datet" Type="date" Mode="In" />
+          <Parameter Name="numOfMeals" Type="int" Mode="In" />
+          <Parameter Name="CombinationID" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="NewCombination2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="datef" Type="date" Mode="In" />
+          <Parameter Name="datet" Type="date" Mode="In" />
+          <Parameter Name="numOfMeals" Type="int" Mode="In" />
+          <Parameter Name="CombinationID" Type="int" Mode="InOut" />
+        </Function>
+        <Function Name="NewCombination3" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="datef" Type="date" Mode="In" />
+          <Parameter Name="datet" Type="date" Mode="In" />
+          <Parameter Name="numOfMeals" Type="int" Mode="In" />
+        </Function>
+        <Function Name="NewGrocerie" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="groctype" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="NewGrocerie2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="groctype" Type="nvarchar" Mode="In" />
+          <Parameter Name="measuringUnit" Type="nvarchar" Mode="In" />
+          <Parameter Name="kcalperMeasuringUnit" Type="int" Mode="In" />
+        </Function>
+        <Function Name="NewMeal" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+          <Parameter Name="grocFat" Type="nvarchar" Mode="In" />
+          <Parameter Name="grocProtein" Type="nvarchar" Mode="In" />
+          <Parameter Name="grocCarbs" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="NewMeasuringUnit" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="NewNutritionsForCombination" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="combinationID" Type="int" Mode="In" />
+          <Parameter Name="fatPercentage" Type="int" Mode="In" />
+          <Parameter Name="proteinPercentage" Type="int" Mode="In" />
+          <Parameter Name="carboPercentage" Type="int" Mode="In" />
+          <Parameter Name="combinationPercentage" Type="int" Mode="In" />
+          <Parameter Name="orderNumber" Type="int" Mode="In" />
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="RegisterNewUser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Surname" Type="nvarchar" Mode="In" />
+          <Parameter Name="dob" Type="date" Mode="In" />
+          <Parameter Name="email" Type="nvarchar" Mode="In" />
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="pass" Type="nvarchar" Mode="In" />
+          <Parameter Name="weight" Type="int" Mode="In" />
+          <Parameter Name="height" Type="int" Mode="In" />
+          <Parameter Name="PhyAct" Type="int" Mode="In" />
+          <Parameter Name="DType" Type="int" Mode="In" />
+          <Parameter Name="sex" Type="char" Mode="In" />
+        </Function>
+        <Function Name="SaveUserMealsForADay" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="date" Type="date" Mode="In" />
+          <Parameter Name="meal" Type="nvarchar" Mode="In" />
+          <Parameter Name="orderNumber" Type="int" Mode="In" />
+          <Parameter Name="grocPbool" Type="bit" Mode="In" />
+          <Parameter Name="grocPMeasureUnit" Type="nvarchar" Mode="In" />
+          <Parameter Name="grocPQuantity" Type="int" Mode="In" />
+          <Parameter Name="grocFbool" Type="bit" Mode="In" />
+          <Parameter Name="grocFMeasureUnit" Type="nvarchar" Mode="In" />
+          <Parameter Name="grocFQuantity" Type="int" Mode="In" />
+          <Parameter Name="grocCbool" Type="bit" Mode="In" />
+          <Parameter Name="grocCMeasureUnit" Type="nvarchar" Mode="In" />
+          <Parameter Name="grocCQuantity" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="PraRwaProjektModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PraRwaProjektModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PraRwaProjektEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="GetGroceries" />
+          <FunctionImport Name="GetMeals" ReturnType="Collection(PraRwaProjektModel.GetMeals_Result)" />
+          <FunctionImport Name="GetMeasuringUnits" ReturnType="Collection(String)" />
+          <FunctionImport Name="GetUserMealsForADay" ReturnType="Collection(PraRwaProjektModel.GetUserMealsForADay_Result)">
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetUsers" ReturnType="Collection(PraRwaProjektModel.GetUsers_Result)" />
+          <FunctionImport Name="LoginUser" ReturnType="Collection(String)">
+          <Parameter Name="username" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="NewCombination">
+            <Parameter Name="datef" Mode="In" Type="DateTime" />
+            <Parameter Name="datet" Mode="In" Type="DateTime" />
+            <Parameter Name="numOfMeals" Mode="In" Type="Int32" />
+            <Parameter Name="CombinationID" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="NewGrocerie">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="groctype" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="NewMeal">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="grocFat" Mode="In" Type="String" />
+            <Parameter Name="grocProtein" Mode="In" Type="String" />
+            <Parameter Name="grocCarbs" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="NewMeasuringUnit">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="NewNutritionsForCombination">
+            <Parameter Name="combinationID" Mode="In" Type="Int32" />
+            <Parameter Name="fatPercentage" Mode="In" Type="Int32" />
+            <Parameter Name="proteinPercentage" Mode="In" Type="Int32" />
+            <Parameter Name="carboPercentage" Mode="In" Type="Int32" />
+            <Parameter Name="combinationPercentage" Mode="In" Type="Int32" />
+            <Parameter Name="orderNumber" Mode="In" Type="Int32" />
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="RegisterNewUser">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Surname" Mode="In" Type="String" />
+            <Parameter Name="dob" Mode="In" Type="DateTime" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="pass" Mode="In" Type="String" />
+            <Parameter Name="weight" Mode="In" Type="Int32" />
+            <Parameter Name="height" Mode="In" Type="Int32" />
+            <Parameter Name="PhyAct" Mode="In" Type="Int32" />
+            <Parameter Name="DType" Mode="In" Type="Int32" />
+            <Parameter Name="sex" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="SaveUserMealsForADay">
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
+            <Parameter Name="meal" Mode="In" Type="String" />
+            <Parameter Name="orderNumber" Mode="In" Type="Int32" />
+            <Parameter Name="grocPbool" Mode="In" Type="Boolean" />
+            <Parameter Name="grocPMeasureUnit" Mode="In" Type="String" />
+            <Parameter Name="grocPQuantity" Mode="In" Type="Int32" />
+            <Parameter Name="grocFbool" Mode="In" Type="Boolean" />
+            <Parameter Name="grocFMeasureUnit" Mode="In" Type="String" />
+            <Parameter Name="grocFQuantity" Mode="In" Type="Int32" />
+            <Parameter Name="grocCbool" Mode="In" Type="Boolean" />
+            <Parameter Name="grocCMeasureUnit" Mode="In" Type="String" />
+            <Parameter Name="grocCQuantity" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetGroceries2" ReturnType="Collection(PraRwaProjektModel.GetGroceries2_Result)" />
+          <FunctionImport Name="NewCombination2">
+            <Parameter Name="datef" Mode="In" Type="DateTime" />
+            <Parameter Name="datet" Mode="In" Type="DateTime" />
+            <Parameter Name="numOfMeals" Mode="In" Type="Int32" />
+            <Parameter Name="CombinationID" Mode="InOut" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="NewCombination3" ReturnType="Collection(Decimal)">
+            <Parameter Name="datef" Mode="In" Type="DateTime" />
+            <Parameter Name="datet" Mode="In" Type="DateTime" />
+            <Parameter Name="numOfMeals" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetGroceriesAndUnits" ReturnType="Collection(PraRwaProjektModel.GetGroceriesAndUnits_Result)" />
+          <FunctionImport Name="NewGrocerie2">
+            <Parameter Name="name" Mode="In" Type="String" />
+            <Parameter Name="groctype" Mode="In" Type="String" />
+            <Parameter Name="measuringUnit" Mode="In" Type="String" />
+            <Parameter Name="kcalperMeasuringUnit" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetMealFromName" ReturnType="Collection(PraRwaProjektModel.GetMealFromName_Result)">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetNutritionsForADay" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay_Result)">
+          <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="GetMealFromName2" ReturnType="Collection(PraRwaProjektModel.GetMealFromName2_Result)">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetNutritionsForADay2" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay2_Result)">
+            <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+            <Parameter Name="mealsNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetNutritionsForADay3" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay3_Result)">
+            <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+            <Parameter Name="mealsNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetNutritionsForADay4" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay4_Result)">
+            <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+            <Parameter Name="mealsNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetNutritionsForADay5" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay5_Result)">
+            <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+            <Parameter Name="mealsNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetNutritionsForADay6" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay6_Result)">
+            <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+            <Parameter Name="mealsNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetNutritionsForADay7" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay7_Result)">
+            <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+            <Parameter Name="mealsNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetUsers2" ReturnType="Collection(PraRwaProjektModel.GetUsers2_Result)" />
+          <FunctionImport Name="GetNutritionsForADay8" ReturnType="Collection(PraRwaProjektModel.GetNutritionsForADay8_Result)">
+            <Parameter Name="dateWhen" Mode="In" Type="DateTime" />
+            <Parameter Name="mealsNum" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="GetMeals_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="ProteinGrocerie" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="FatGrocerie" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="CarboGrocerie" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="GetUserMealsForADay_Result">
+          <Property Type="Int32" Name="OrderNumber" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name3" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="GetUsers_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Surname" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Weight" Nullable="true" />
+          <Property Type="Int32" Name="Height" Nullable="true" />
+          <Property Type="Int32" Name="DiabetesType" Nullable="true" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="PhysicalActivity" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="1" />
+        </ComplexType>
+        <ComplexType Name="GetGroceries2_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="GrocerieType" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="GetGroceriesAndUnits_Result">
+          <Property Type="String" Name="GrocerieName" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="MeasuringUnitName" Nullable="true" MaxLength="20" />
+          <Property Type="Int32" Name="Quantity" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetMealFromName_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name1" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name2" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Name3" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetMealFromName2_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Carb" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Fat" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Protein" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay2_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay3_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay4_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay5_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay6_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay7_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="GetUsers2_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="Surname" Nullable="true" MaxLength="50" />
+          <Property Type="Int32" Name="Weight" Nullable="true" />
+          <Property Type="Int32" Name="Height" Nullable="true" />
+          <Property Type="Int32" Name="DiabetesType" Nullable="true" />
+          <Property Type="DateTime" Name="DateOfBirth" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="PhysicalActivity" Nullable="true" />
+          <Property Type="String" Name="Sex" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="Username" Nullable="true" MaxLength="12" />
+          <Property Type="String" Name="Password" Nullable="true" MaxLength="20" />
+        </ComplexType>
+        <ComplexType Name="GetNutritionsForADay8_Result">
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="30" />
+          <Property Type="Int32" Name="OrderNumber" Nullable="true" />
+          <Property Type="Int32" Name="FatPerc" Nullable="true" />
+          <Property Type="Int32" Name="ProtPerc" Nullable="true" />
+          <Property Type="Int32" Name="CarbPerc" Nullable="true" />
+          <Property Type="Int32" Name="combPerc" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PraRwaProjektModelStoreContainer" CdmEntityContainer="PraRwaProjektEntities" >
+          <FunctionImportMapping FunctionImportName="GetGroceries" FunctionName="PraRwaProjektModel.Store.GetGroceries" />
+          <FunctionImportMapping FunctionImportName="GetMeals" FunctionName="PraRwaProjektModel.Store.GetMeals">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetMeals_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ProteinGrocerie" ColumnName="ProteinGrocerie" />
+                <ScalarProperty Name="FatGrocerie" ColumnName="FatGrocerie" />
+                <ScalarProperty Name="CarboGrocerie" ColumnName="CarboGrocerie" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetMeasuringUnits" FunctionName="PraRwaProjektModel.Store.GetMeasuringUnits" />
+          <FunctionImportMapping FunctionImportName="GetUserMealsForADay" FunctionName="PraRwaProjektModel.Store.GetUserMealsForADay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetUserMealsForADay_Result">
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name1" ColumnName="Name1" />
+                <ScalarProperty Name="Name2" ColumnName="Name2" />
+                <ScalarProperty Name="Name3" ColumnName="Name3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetUsers" FunctionName="PraRwaProjektModel.Store.GetUsers">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetUsers_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="DiabetesType" ColumnName="DiabetesType" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhysicalActivity" ColumnName="PhysicalActivity" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="LoginUser" FunctionName="PraRwaProjektModel.Store.LoginUser" />
+          <FunctionImportMapping FunctionImportName="NewCombination" FunctionName="PraRwaProjektModel.Store.NewCombination" />
+          <FunctionImportMapping FunctionImportName="NewGrocerie" FunctionName="PraRwaProjektModel.Store.NewGrocerie" />
+          <FunctionImportMapping FunctionImportName="NewMeal" FunctionName="PraRwaProjektModel.Store.NewMeal" />
+          <FunctionImportMapping FunctionImportName="NewMeasuringUnit" FunctionName="PraRwaProjektModel.Store.NewMeasuringUnit" />
+          <FunctionImportMapping FunctionImportName="NewNutritionsForCombination" FunctionName="PraRwaProjektModel.Store.NewNutritionsForCombination" />
+          <FunctionImportMapping FunctionImportName="RegisterNewUser" FunctionName="PraRwaProjektModel.Store.RegisterNewUser" />
+          <FunctionImportMapping FunctionImportName="SaveUserMealsForADay" FunctionName="PraRwaProjektModel.Store.SaveUserMealsForADay" />
+          <FunctionImportMapping FunctionImportName="GetGroceries2" FunctionName="PraRwaProjektModel.Store.GetGroceries2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetGroceries2_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GrocerieType" ColumnName="GrocerieType" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="NewCombination2" FunctionName="PraRwaProjektModel.Store.NewCombination2" />
+          <FunctionImportMapping FunctionImportName="NewCombination3" FunctionName="PraRwaProjektModel.Store.NewCombination3" />
+          <FunctionImportMapping FunctionImportName="GetGroceriesAndUnits" FunctionName="PraRwaProjektModel.Store.GetGroceriesAndUnits">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetGroceriesAndUnits_Result">
+                <ScalarProperty Name="GrocerieName" ColumnName="GrocerieName" />
+                <ScalarProperty Name="MeasuringUnitName" ColumnName="MeasuringUnitName" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="NewGrocerie2" FunctionName="PraRwaProjektModel.Store.NewGrocerie2" />
+          <FunctionImportMapping FunctionImportName="GetMealFromName" FunctionName="PraRwaProjektModel.Store.GetMealFromName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetMealFromName_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Name1" ColumnName="Name1" />
+                <ScalarProperty Name="Name2" ColumnName="Name2" />
+                <ScalarProperty Name="Name3" ColumnName="Name3" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetMealFromName2" FunctionName="PraRwaProjektModel.Store.GetMealFromName2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetMealFromName2_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Carb" ColumnName="Carb" />
+                <ScalarProperty Name="Fat" ColumnName="Fat" />
+                <ScalarProperty Name="Protein" ColumnName="Protein" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay2" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay2_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay3" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay3">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay3_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay4" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay4">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay4_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay5" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay5">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay5_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay6" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay6">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay6_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay7" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay7">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay7_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetUsers2" FunctionName="PraRwaProjektModel.Store.GetUsers2">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetUsers2_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="DiabetesType" ColumnName="DiabetesType" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="PhysicalActivity" ColumnName="PhysicalActivity" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetNutritionsForADay8" FunctionName="PraRwaProjektModel.Store.GetNutritionsForADay8">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PraRwaProjektModel.GetNutritionsForADay8_Result">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+                <ScalarProperty Name="FatPerc" ColumnName="FatPerc" />
+                <ScalarProperty Name="ProtPerc" ColumnName="ProtPerc" />
+                <ScalarProperty Name="CarbPerc" ColumnName="CarbPerc" />
+                <ScalarProperty Name="combPerc" ColumnName="combPerc" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

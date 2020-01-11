@@ -1,0 +1,27 @@
+﻿.Buttonz {
+    width: 40%;
+    margin: auto;
+    height: 50px;
+    margin-top: 30px;
+    background-color: #5D789D;
+    color: white;
+    font-weight: bolder;
+}
+.LogoutButton{
+    position:absolute;
+    right:0;
+    top: 0;
+    width: 150px;
+    height: 40px;
+    background-color: #5D789D;
+    color: #284775;
+    font-weight:bold;
+}
+.divided{
+    display:block;
+}
+.newMeasuringUnit{
+    float:right;
+    margin-right: 100px;
+    display:block;
+}

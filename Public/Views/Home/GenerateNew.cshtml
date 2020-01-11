@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "GenerateNew";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>GenerateNew</h2>
+
+<div class="choose">
+    <label for="mealsNum">Input number of meals:</label>
+    <input type="number" name="mealsNum" id="mealsNum" value="1-5" />
+    <input type="button" name="submitMealsNum" value="Submit" id="submitNumBtn"/>
+
+</div>
+<div id="tblMeals">
+    
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#mealsNum").blur(function () {
+            console.log("blur");
+            getData();
+        });
+        $("#submitNumBtn").click(function () {
+            console.log("btnSubmit");
+            getData();
+        })
+    });
+
+    function getData() {
+        var date = new Date();
+        $.ajax({
+            type: 'POST',
+            url: '/Home/GetMealsToShow',
+            dataType: 'text',
+            data: {
+                numOfMeals: $("#mealsNum").val(),
+                date: date.toISOString()
+            },
+            success: (function (result) {
+                $('#tblMeals').html(result);
+            }),
+            error: (function (xhr, status) {
+                alert(status);
+            })
+        })
+    }
+</script>
+

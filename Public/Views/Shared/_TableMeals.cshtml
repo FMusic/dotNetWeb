@@ -1,0 +1,53 @@
+﻿@model Public.Models.MealsViewModel
+<body>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Meal</th>
+                <th scope="col">Groceries</th>
+                @foreach (var grocerieMU in Model.MealsInfo.Meals[0].MeasuringUnits)
+                {
+                    <th scope="col">@grocerieMU</th>
+                }
+            </tr>
+        </thead>
+        @for (int i = 0; i < Model.MealsInfo.Meals.Count; i++)
+        {
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(x => x.MealsList.PickedMeals[i].Meal, new { id = "mealCB" + i })
+                    @Model.MealsInfo.Meals[i].MealName
+                </td>
+                <td>
+                    @Html.CheckBoxFor(x => x.MealsList.PickedMeals[i].FatGroc, new { id = "fatCB" + i })
+                    @Model.MealsInfo.Meals[i].fatGroc
+                    <br />
+                    @Html.CheckBoxFor(x => x.MealsList.PickedMeals[i].ProteinGroc, new { id = "protCB" + i })
+                    @Model.MealsInfo.Meals[i].protGroc
+                    <br />
+                    @Html.CheckBoxFor(x => x.MealsList.PickedMeals[i].CarboGroc, new { id = "carbCB" + i })
+                    @Model.MealsInfo.Meals[i].carbGroc
+                </td>
+                @foreach(var grocerieMU in Model.MealsInfo.Meals[0].MeasuringUnits)
+                {
+                    /*First is fat, second is prot, third is carb*/
+                <td>
+                    @{  var x = Model.MealsInfo.Meals[i].GrocsInMu;
+                        var y = x.Where(m => m.MeasureUnitName == grocerieMU).ToList();
+                        var z = y.FirstOrDefault();
+                        var a = z.GrocQuantites; 
+                     }
+                    <label>@a[0]</label>
+                    <br />
+                    <label>@a[1]</label>
+                    <br />
+                    <label>@a[2]</label>
+                </td>
+                }
+            </tr>
+        }
+    </table>
+    <script>
+
+    </script>
+</body>
